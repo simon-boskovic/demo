@@ -1,0 +1,45 @@
+<label for="input" class="c-form-label">Cities autocomplete</label>
+<div class="c-form-control">
+  <input id="input" value="Value" autocomplete="off" [(ngModel)]="text" />
+</div>
+
+<div class="c-list-group c-list-group--box u-mt-8">
+  <ul class="c-list-group__list">
+    <li class="c-list-group__item is-selected u-cur-p">
+      <span class="u-d-fx u-align-items-center">
+        <span class="u-truncate u-mr-3"></span>
+        <div class="u-ml-auto">
+          <div class="c-button-group c-button-group--small">
+            <button type="button" class="c-button c-button--subtle c-button--icon-only">
+              <span class="c-button__text">Link</span>
+              <span class="c-button__icon">
+                <i class="o-icon">
+                  <svg class="o-icon__svg">
+                    <use xlink:href="icons.svg#link"></use>
+                  </svg>
+                </i>
+              </span>
+            </button>
+            <button type="button" class="c-button c-button--subtle c-button--icon-only">
+              <span class="c-button__text">More</span>
+              <span class="c-button__icon">
+                <i class="o-icon">
+                  <svg class="o-icon__svg">
+                    <use xlink:href="icons.svg#more"></use>
+                  </svg>
+                </i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </span>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="showWeather">
+  <h2 class="location">{{ weather?.name }}</h2>
+  <div class="icon"><img [src]="weatherUrl" /></div>
+  <h3 class="desc">{{ weatherInfo?.main }}</h3>
+  <h3 class="temp">{{ weather?.main.temp }}&deg;C</h3>
+</div>

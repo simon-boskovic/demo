@@ -1,0 +1,52 @@
+<div class="layout">
+  <div class="layout__left u-b">
+    <label for="input" class="c-form-label">Cities autocomplete</label>
+    <div class="c-form-control">
+      <input id="input" value="Value" autocomplete="off" [(ngModel)]="text" />
+    </div>
+
+    <button type="button" class="c-button c-button--primary u-mt-3" (click)="getCities()">
+      <span class="c-button__text">Search</span>
+    </button>
+    <!-- <button type="button" class="c-button c-button--primary" routerLink="weather">
+      <span class="c-button__text">weather</span>
+    </button> -->
+
+    <div class="c-list-group c-list-group--box u-mt-8">
+      <ul class="c-list-group__list">
+        <li class="c-list-group__item is-selected u-cur-p" *ngFor="let item of cities">
+          <span class="u-d-fx u-align-items-center" (click)="onCitySelect(item)" routerLink="weather/map">
+            <span class="u-truncate u-mr-3">{{ item.place_name }}</span>
+            <div class="u-ml-auto">
+              <!-- <div class="c-button-group c-button-group--small">
+                <button type="button" class="c-button c-button--subtle c-button--icon-only">
+                  <span class="c-button__text">Link</span>
+                  <span class="c-button__icon">
+                    <i class="o-icon">
+                      <svg class="o-icon__svg">
+                        <use xlink:href="icons.svg#link"></use>
+                      </svg>
+                    </i>
+                  </span>
+                </button>
+                <button type="button" class="c-button c-button--subtle c-button--icon-only">
+                  <span class="c-button__text">More</span>
+                  <span class="c-button__icon">
+                    <i class="o-icon">
+                      <svg class="o-icon__svg">
+                        <use xlink:href="icons.svg#more"></use>
+                      </svg>
+                    </i>
+                  </span>
+                </button>
+              </div> -->
+            </div>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="layout__right u-b">
+    <router-outlet></router-outlet>
+  </div>
+</div>

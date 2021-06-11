@@ -1,0 +1,23 @@
+.homepage {
+  display: block;
+  max-width: 60rem;
+  margin: auto;
+  text-align: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  span {
+    padding: 15px 10px;
+    margin: 0 10px;
+    font-weight: 600;
+    color: #407cff;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}

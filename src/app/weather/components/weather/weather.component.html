@@ -1,0 +1,13 @@
+<div class="layout">
+  <div class="layout__left u-b">
+    <div *ngIf="showWeather">
+      <h2 class="location">{{ weather?.name }}</h2>
+      <div class="icon"><img [src]="weatherUrl" /></div>
+      <h3 class="desc">{{ weatherInfo?.main }}</h3>
+      <h3 class="temp">{{ weather?.main.temp }}&deg;C</h3>
+    </div>
+  </div>
+  <div class="layout__right">
+    <router-outlet></router-outlet>
+  </div>
+</div>

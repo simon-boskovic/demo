@@ -1,0 +1,22 @@
+.layout {
+  display: flex;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+}
+
+.layout__left {
+  padding: 50px 50px;
+  flex: 0 0 750px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.layout__right {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.u-cur-p {
+  cursor: pointer;
+}
